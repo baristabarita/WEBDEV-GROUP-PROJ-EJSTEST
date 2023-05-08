@@ -1,0 +1,70 @@
+body{
+    overflow-x: hidden;
+    background: url(../../images/reg-background.png) no-repeat center center/cover;
+    height: 100vh;
+}
+
+.card0{
+    margin: 40px 40px 40px 40px;
+    box-shadow: 0px 4px 8px 0px #000;
+    margin-bottom: 100px;
+}
+
+
+#forgotpass-content{
+    margin: auto;
+}
+
+#forgotpass-title{
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+#fgp-button{
+    transition: .3s;
+    border-radius: 25px;
+    border: #036D70 solid 2px; 
+    background-color: #fff;
+    margin-top:10px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1% 21% 1% 21%;
+    font-size: 30px;
+    color: #036D70;
+    font-weight: bold;
+}
+#fgp-button:hover{
+    background: #036D70;
+    color: white;
+}
+::placeholder {
+    color: #BDBDBD;
+    opacity: 1;
+    font-weight: 300
+}
+
+input, textarea {
+    padding: 10px 12px 10px 12px;
+    border: 1px solid lightgrey;
+    border-radius: 2px;
+    margin-bottom: 5px;
+    margin-top: 2px;
+    width: 100%;
+    box-sizing: border-box;
+    color: #2C3E50;
+    font-size: 14px;
+    letter-spacing: 1px;
+}
+
+
+
+
+@media screen and (max-width: 991px) {
+
+    .card0 {
+        border-top: 1px solid #EEEEEE !important;
+        margin: 0px 15px;
+    }
+}

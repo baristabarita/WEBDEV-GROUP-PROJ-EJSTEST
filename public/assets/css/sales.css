@@ -1,0 +1,58 @@
+/* style for sales page */
+
+h6 {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+table {
+    width: 100%;
+}
+
+.sales-wrap {
+    margin: 0 30px;
+}
+
+.sales-info {
+    display: flex;
+}
+
+.top-selling {
+    width: 75%;
+    margin-right: 20px;
+    padding: 40px 50px;
+}
+
+.top-selling th,
+.top-selling td {
+    text-align: center;
+    padding: 10px 5px;
+    border-bottom: 1px solid #c6c6c6b0;
+}
+
+.sales-info-stats {
+    width: 25%;
+}
+
+.sales-info-stats table {
+    margin-top: 5px;
+}
+
+.total-sales-menu {
+    position: relative;
+    left: 60px;
+}
+
+/* This is only temporary style before the actual graph */
+
+.total-sales-style {
+    width: 180px;
+    height: 180px;
+    border: 15px solid #0b6dff;
+    border-radius: 50%;
+    margin: 50px 0;
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 50px;
+}

@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Plugin CSS -->
+    <link rel="stylesheet" href="assets/plugins/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/plugins/fontawesome-free-6.4.0-web/css/all.min.css">
+
+
+    <!-- Local CSS -->
+    <link rel="stylesheet" href="assets/css/manage-product-table.css">
+    <link rel="stylesheet" href="assets/css/super-admin/super-admin-sidetopbar.css">
+    <link rel="stylesheet" href="assets/css/super-admin/super-admin-dash.css">
+
+    <!-- Icon -->
+    <link rel="icon" href="images/icons/provlogo.png" type="image/x-icon">
+    <!-- Page Title -->
+    <title>Super-Admin Logs</title>
+</head>
+
+<body>
+    <div class="wrapper">
+
+
+        <!-- Sidebar Section Start -->
+        <nav id="sidebar">
+            <div class="sidebar-header">
+                <h3><img src="../../images/icons/provlogo.png" class="img-fluid" /><span>PROVENTORY</span></h3>
+            </div>
+            <ul class="list-unstyled component m-0">
+                <li class="">
+                    <a href="/superadmin_dashboard" class="dashboard"><i class="fa-solid fa-gauge"></i>Dashboard </a>
+                </li>
+
+                <li class="">
+                    <a href="/superadmin_profile" class=""><i class="fa-solid fa-user"></i>Profile </a>
+                </li>
+                <li class="">
+                    <a href="/manage_accounts_main" class=""><i class="fa-solid fa-users-gear"></i>Accounts</a>
+                </li>
+
+                <li class="active">
+                    <a href="/supad_recentlogs" class=""><i class="fa-solid fa-clock"></i>Recent Logs </a>
+                </li>
+
+                <li class="">
+                    <a href="/superadmin_logout" class=""><i class="fa-solid fa-right-from-bracket"></i>Logout </a>
+                </li>
+            </ul>
+        </nav>
+
+
+        <!-- Sidebar Section END -->
+
+
+        <!-- Page-content Start -->
+
+        <div id="content">
+
+            <!-- Top-Navbar Start -->
+            <div class="top-navbar">
+                <div class="xd-topbar">
+                    <div class="row">
+                        <div class="col-2 col-md-1 col-lg-1 order-2 order-md-1 align-self-center">
+                            <div class="xp-menubar">
+                                <i class="fa-solid fa-bars"></i>
+                            </div>
+                        </div>
+
+                        <!-- Search Bar Start -->
+                        <div class="col-md-5 col-lg-3 order-3 order-md-2">
+                            <div class="xp-searchbar">
+                                <form>
+                                    <div class="input-group">
+                                        <input type="search" class="form-control" placeholder="Search">
+                                        <div class="input-group-append">
+                                            <button class="btn" type="submit" id="button-addon2">Go
+                                            </button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                        <!-- Search Bar End -->
+
+                        <div class="col-10 col-md-6 col-lg-8 order-1 order-md-3">
+                            <div class="xp-profilebar text-right">
+                                <nav class="navbar p-1">
+                                    <ul class="nav navbar-nav flex-row ml-auto">
+                                        <li class="dropdown nav-item">
+                                            <a class="nav-link" href="#" data-toggle="dropdown">
+                                                <i class="fa-solid fa-bell fa-xl"></i>
+                                                <span class="notification">#</span>
+                                            </a>
+                                            <ul class="dropdown-menu">
+                                                <li><a href="#">You Have # New Messages</a></li>
+                                            </ul>
+                                        </li>
+
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="#">
+                                                <i class="fa-solid fa-envelope fa-xl"></i>
+                                            </a>
+                                        </li>
+
+                                        <li class="dropdown nav-item">
+                                            <a class="nav-link" href="#" data-toggle="dropdown">
+                                                <img id="dash-prof" src="../../images/icons/profile-dashboard.png" />
+                                                <span class="xp-user-live"></span>
+                                            </a>
+                                            <ul class="dropdown-menu small-menu">
+                                                <li><a href="./profile.html">
+                                                        <span class="material-icons">Profile</span>
+                                                    </a></li>
+                                                <li><a href="#">
+                                                        <span class="material-icons">Settings</span>
+                                                    </a></li>
+                                                <li><a href="../super-admin/super-admin-log.html">
+                                                        <span class="material-icons">logout</span>
+                                                    </a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+            <!-- Top-Navbar End -->
+
+
+            <!-- Main-Content START -->
+
+            <div class="main-content">
+                <div class="row justify-content-between">
+                    <h4>Recent Logs</h4>
+                    <form action="" class="form-inline">
+                        <label for="sort-by">Sort By:</label>
+                        <select class="sort form-control" id="sort-by">
+                            <option value="date">Date</option>
+                            <option value="time">Time</option>
+                            <option value="type">Type</option>
+                            <option value="username">Username</option>
+                        </select>
+                    </form>
+                </div>
+
+                <!-- Table start -->
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="table-wrapper">
+                            <!-- Top Part of table -->
+                            <div class="table-title">
+                                <div class="row">
+                                    <div class="col-sm-6 p-0 flex justify-content-lg-start justify-content-center">
+                                        <h2 class="ml-lg-2">Log List</h2>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                            <table class="table table-striped table-hover">
+                                <!-- Table Names -->
+                                <thead>
+                                    <tr>
+                                        <th>#</th>
+                                        <th>Transaction Type</th>
+                                        <th>Short description of the transaction made</th>
+                                        <th>changed by [username]</th>
+                                        <th>Date</th>
+                                        <th>Time</th>
+                                    </tr>
+                                </thead>
+                                <!-- Table Names -->
+
+                                <tbody>
+                                    <tr>
+                                        <th>#</th>
+                                        <th>Transaction Type</th>
+                                        <th>Short description of the transaction made</th>
+                                        <th>changed by [username]</th>
+                                        <th>Date</th>
+                                        <th>Time</th>
+                                    </tr>
+
+                                    <tr>
+                                        <th>#</th>
+                                        <th>Transaction Type</th>
+                                        <th>Short description of the transaction made</th>
+                                        <th>changed by [username]</th>
+                                        <th>Date</th>
+                                        <th>Time</th>
+                                    </tr>
+
+                                    <tr>
+                                        <th>#</th>
+                                        <th>Transaction Type</th>
+                                        <th>Short description of the transaction made</th>
+                                        <th>changed by [username]</th>
+                                        <th>Date</th>
+                                        <th>Time</th>
+                                    </tr>
+
+                                    <tr>
+                                        <th>#</th>
+                                        <th>Transaction Type</th>
+                                        <th>Short description of the transaction made</th>
+                                        <th>changed by [username]</th>
+                                        <th>Date</th>
+                                        <th>Time</th>
+                                    </tr>
+
+                                    <tr>
+                                        <th>#</th>
+                                        <th>Transaction Type</th>
+                                        <th>Short description of the transaction made</th>
+                                        <th>changed by [username]</th>
+                                        <th>Date</th>
+                                        <th>Time</th>
+                                    </tr>
+
+                                    <tr>
+                                        <th>#</th>
+                                        <th>Transaction Type</th>
+                                        <th>Short description of the transaction made</th>
+                                        <th>changed by [username]</th>
+                                        <th>Date</th>
+                                        <th>Time</th>
+                                    </tr>
+
+                                    <tr>
+                                        <th>#</th>
+                                        <th>Transaction Type</th>
+                                        <th>Short description of the transaction made</th>
+                                        <th>changed by [username]</th>
+                                        <th>Date</th>
+                                        <th>Time</th>
+                                    </tr>
+
+                                    <tr>
+                                        <th>#</th>
+                                        <th>Transaction Type</th>
+                                        <th>Short description of the transaction made</th>
+                                        <th>changed by [username]</th>
+                                        <th>Date</th>
+                                        <th>Time</th>
+                                    </tr>
+
+                                    <tr>
+                                        <th>#</th>
+                                        <th>Transaction Type</th>
+                                        <th>Short description of the transaction made</th>
+                                        <th>changed by [username]</th>
+                                        <th>Date</th>
+                                        <th>Time</th>
+                                    </tr>
+
+                                </tbody>
+                            </table>
+
+                            <div class="clearfix">
+                                <div class="hint-text">Showing <b>10</b> out of <b>999</b></div>
+                                <ul class="pagination">
+                                    <li class="page-item disabled"><a href="#">Previous</a></li>
+                                    <li class="page-item active"><a href="#" class="page-link">1</a></li>
+                                    <li class="page-item "><a href="#" class="page-link">2</a></li>
+                                    <li class="page-item "><a href="#" class="page-link">3</a></li>
+                                    <li class="page-item "><a href="#" class="page-link">4</a></li>
+                                    <li class="page-item "><a href="#" class="page-link">5</a></li>
+                                    <li class="page-item "><a href="#" class="page-link">Next</a></li>
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <!-- Table end-->
+            </div>
+            <!-- Main-Content END -->
+
+
+
+
+            <!-- Footer-Section START -->
+
+            <footer class="footer">
+                <div class="container-fluid">
+                    <div class="footer-in">
+                        <p class="mb-0">&copy 2022 Proventory. All Rights Reserved.</p>
+                    </div>
+                </div>
+            </footer>
+
+            <!-- Footer-Section END -->
+
+        </div>
+        <!-- Page-Content END -->
+
+    </div>
+
+    </div>
+    <!-- Script Starts -->
+
+    <!-- Plugins -->
+    <script src="../assets/plugins/jquery/jquery.js"></script>
+    <script src="../assets/plugins/popper/popper.js"></script>
+    <script src="../assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+
+    <!-- Own scripts -->
+    <script src="../assets/js/sidebar.js"></script>
+
+    <!-- Script End -->
+</body>
+
+</html>

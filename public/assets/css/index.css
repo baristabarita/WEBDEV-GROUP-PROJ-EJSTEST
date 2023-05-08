@@ -1,0 +1,210 @@
+body{
+    animation: transitionIn 0.75s;
+    
+}
+
+
+/* Index Page NavBar CSS START */
+.navbar{
+    background-color: #003249;
+}
+.btn{
+    color: white;
+}
+.btn:hover{
+    color: #F5E6CA;
+}
+.nav-but{
+    background-color: #6369D1;
+    border-radius: 10px;
+}
+/* Index Page NavBar CSS START */
+
+/* Header CSS START */
+.header-section{
+    background-color: #003249;
+    padding-bottom: 8%;
+    margin-bottom: 0px;
+}
+
+#homepage-header{
+    color: white;
+    padding-top: 100px;
+}
+
+.homepage-pic{
+    margin-top: 80px;
+    width: 120%;
+    height: 120%;
+}
+
+#homepage-btn{
+    transition: .3s;
+    font-size: 20px;
+    background-color: #fff;
+    color: #6369D1;
+    border: #6369D1 solid 2px;
+    border-radius: 10px;
+}
+
+#homepage-btn a{
+    transition: .3s;
+    font-size: 20px;
+    margin: 10px;
+    color: #6369D1;
+    text-decoration: none;
+}
+
+#homepage-btn:hover{
+    background-color: #6369D1;
+}
+#homepage-btn:hover a {
+    color: #fff;
+}
+
+/* Header CSS END */
+
+/* About Us CSS Start*/
+.aboutUs-section{
+    background: url(../../images/InventoryManagement.png) no-repeat center center/cover;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+#aboutUs-title{
+    font-size: 50px;
+    -webkit-text-stroke: 1px black;
+    color: white;
+    text-shadow:
+       3px 3px 0 #000,
+     -1px -1px 0 #000,  
+      1px -1px 0 #000,
+      -1px 1px 0 #000,
+       1px 1px 0 #000;
+}
+#aboutUs-body{
+    border-radius: 25px;
+    background-color: #E7DFC6;
+    box-shadow: 0px 4px 8px 0px #2f4858;
+    margin-top: 30%;
+}
+#aboutUs-pic{
+    margin-top: 20px;
+    width: 110%;
+}
+#aboutUs-paragraph{
+    color:black;
+}
+/* About Us CSS End*/
+
+/* Features and Contact Us Section CSS Start */
+.features-section{
+    /*background-color: #CCDBDC;*/
+    background: url(../../images/business-chart-visual-graphics-report-concept.png) no-repeat center center/cover;
+    padding: 80px 0;
+    margin-bottom: 0px;
+}
+#features-title{
+    color: #fff;
+    text-align: center;
+    margin-bottom: 10px;
+}
+#features-title h1{
+    text-shadow: 2px 2px #000;
+
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+}
+
+#features-title hr{
+    border: solid 1px;
+}
+
+#feature-card{
+    margin-bottom: 10px;
+}
+
+.contactUs-section{
+    padding: 80px 0;
+    /*
+    background-color: #80CED7;
+    */
+    background: url(../../images/top-view-business-man-hands-working-laptop-tablet-pc-wooden-desk.png) no-repeat center center/cover;
+}
+#contact-card, #feature-card{
+    box-shadow: 0 0 30px rgba(0,0,0,0.5);
+    overflow: hidden;
+    border-radius: 15px;
+}
+.backimg img{
+    height: 150px;
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
+    width: 100%;
+}
+.iconimg img{
+    position: relative;
+    display:block;
+    margin-left: auto;
+    margin-right: auto;
+    z-index: 1;
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    border: 7px solid #fff;
+    margin-top: -80px;
+}
+.main-text h2{
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 900;
+    font-size: 20px;
+    margin: 0 0 20px;
+}
+.main-text p{
+    font-size: 16px;
+    padding: 0 35px;
+}
+
+
+#contactUs-btn{
+    transition: .3s;
+    margin-left: auto;
+    margin-right: auto;
+    font-weight: bold;
+    font-size: 20px;
+    background-color: #fff;
+    color: #F2BB05;
+    border: #F2BB05 solid 2px;
+    border-radius: 10px;
+}
+
+#contactUs-btn a{
+    transition: .3s;
+    color: #F2BB05;
+    text-decoration: none;
+}
+
+#contactUs-btn:hover{
+    background-color: #F2BB05;
+}
+#contactUs-btn:hover a {
+    color: #fff;
+}
+/* Features and Contact Us Section CSS END */
+
+.card-text{
+    color: white;
+}
+
+/*Testing animation for loading in*/
+@keyframes transitionIn{
+    from{
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

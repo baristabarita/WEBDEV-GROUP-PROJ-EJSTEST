@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Plugin CSS -->
+    <link rel="stylesheet" href="../assets/plugins/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../assets/plugins/fontawesome-free-6.4.0-web/css/all.min.css">
+
+
+    <!-- Local CSS -->
+    <link rel="stylesheet" href="../assets/css/super-admin/super-admin-sidetopbar.css">
+    <link rel="stylesheet" href="../assets/css/super-admin/super-admin-dash.css">
+    <link rel="stylesheet" href="../assets/css/add-edit-product.css">
+
+    <!-- Icon -->
+    <link rel="icon" href="../images/icons/provlogo.png" type="image/x-icon">
+    <!-- Page Title -->
+    <title>Super Admin | Add User</title>
+</head>
+
+<body>
+    <div class="wrapper">
+
+
+        <!-- Sidebar Section Start -->
+        <nav id="sidebar">
+            <div class="sidebar-header">
+                <h3><img src="../../images/icons/provlogo.png" class="img-fluid" /><span>PROVENTORY</span></h3>
+            </div>
+            <ul class="list-unstyled component m-0">
+                <li class="">
+                    <a href="/superadmin_dashboard" class="dashboard"><i class="fa-solid fa-gauge"></i>Dashboard </a>
+                </li>
+
+                <li class="">
+                    <a href="/superadmin_profile" class=""><i class="fa-solid fa-user"></i>Profile </a>
+                </li>
+                <li class="">
+                    <a href="/manage_accounts_main" class=""><i class="fa-solid fa-users-gear"></i>Accounts</a>
+                </li>
+
+                <li class="">
+                    <a href="/supad_recentlogs" class=""><i class="fa-solid fa-clock"></i>Recent Logs </a>
+                </li>
+
+                <li class="">
+                    <a href="/superadmin_logout" class=""><i class="fa-solid fa-right-from-bracket"></i>Logout </a>
+                </li>
+            </ul>
+        </nav>
+        <!-- Sidebar Section END -->
+
+
+        <!-- Page-content Start -->
+
+        <div id="content">
+
+            <!-- Top-Navbar Start -->
+            <div class="top-navbar">
+                <div class="xd-topbar">
+                    <div class="row">
+                        <div class="col-2 col-md-1 col-lg-1 order-2 order-md-1 align-self-center">
+                            <div class="xp-menubar">
+                                <i class="fa-solid fa-bars"></i>
+                            </div>
+                        </div>
+
+                        <!-- Search Bar Start -->
+                        <div class="col-md-5 col-lg-3 order-3 order-md-2">
+                            <div class="xp-searchbar">
+                                <form>
+                                    <div class="input-group">
+                                        <input type="search" class="form-control" placeholder="Search">
+                                        <div class="input-group-append">
+                                            <button class="btn" type="submit" id="button-addon2">Go
+                                            </button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                        <!-- Search Bar End -->
+
+                        <div class="col-10 col-md-6 col-lg-8 order-1 order-md-3">
+                            <div class="xp-profilebar text-right">
+                                <nav class="navbar p-1">
+                                    <ul class="nav navbar-nav flex-row ml-auto">
+                                        <li class="dropdown nav-item">
+                                            <a class="nav-link" href="#" data-toggle="dropdown">
+                                                <i class="fa-solid fa-bell fa-xl"></i>
+                                                <span class="notification">#</span>
+                                            </a>
+                                            <ul class="dropdown-menu">
+                                                <li><a href="#">You Have # New Messages</a></li>
+                                            </ul>
+                                        </li>
+
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="#">
+                                                <i class="fa-solid fa-envelope fa-xl"></i>
+                                            </a>
+                                        </li>
+
+                                        <li class="dropdown nav-item">
+                                            <a class="nav-link" href="#" data-toggle="dropdown">
+                                                <img id="dash-prof" src="../images/icons/profile-dashboard.png" />
+                                                <span class="xp-user-live"></span>
+                                            </a>
+                                            <ul class="dropdown-menu small-menu">
+                                                <li><a href="./profile.html">
+                                                        <span class="material-icons">Profile</span>
+                                                    </a></li>
+                                                <li><a href="#">
+                                                        <span class="material-icons">Settings</span>
+                                                    </a></li>
+                                                <li><a href="./index.html">
+                                                        <span class="material-icons">logout</span>
+                                                    </a></li>
+
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+            <!-- Top-Navbar End -->
+
+
+            <!-- Main-Content START -->
+
+            <div class="main-content">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h4>
+                            <%= title %>
+                        </h4>
+                        <hr />
+                        <form action ="/update" method = "post">
+                            <div class="row">
+                                <div class="col-lg-6 col-md-6 col-sm-12">
+                                    <input type="hidden" value="<%= account.id %>" name="id" required>
+                                    <div class="form-group">
+                                        <label>Email Address:</label>
+                                        <input type="email" class="form-control" id="email" value="<%= account.email %>" name="email" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Password:</label>
+                                        <input type="text" class="form-control" id="password" value="<%= account.password %>" name="password" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Username:</label>
+                                        <input type="text" class="form-control" id="username" value="<%= account.username %>" name="username" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Category:</label>
+                                        <input type="text" class="form-control" id="category" value="<%= account.category %>" name="category" required>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-md-6 col-sm-12">
+                                    <div class="form-group">
+                                        <label>Phone Number:</label>
+                                        <input type="text" class="form-control" id="phone" value="<%= account.phone_number %>" name="phone_number" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>First Name:</label>
+                                        <input type="text" class="form-control" id="fname" value="<%= account.fname %>" name="fname" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Last Name:</label>
+                                        <input type="text" class="form-control" id="lname" value="<%= account.lname %>" name="lname" required >
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div>
+                                <button id="saveProd-btn" type="submit" class="btn text-center">Save Account</button>
+                                <button id="cancel-btn" type="submit" class="btn text-center">
+                                    <a href="#">Cancel</a></button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <!-- Main-Content END -->
+
+
+
+
+            <!-- Footer-Section START -->
+
+            <footer class="footer">
+                <div class="container-fluid">
+                    <div class="footer-in">
+                        <p class="mb-0">&copy 2022 Proventory. All Rights Reserved.</p>
+                    </div>
+                </div>
+            </footer>
+
+            <!-- Footer-Section END -->
+
+        </div>
+        <!-- Page-Content END -->
+
+    </div>
+
+    </div>
+    <!-- Script Starts -->
+
+    <!-- Plugins -->
+    <script src="../assets/plugins/jquery/jquery.js"></script>
+    <script src="../assets/plugins/popper/popper.js"></script>
+    <script src="../assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+
+    <!-- Local scripts -->
+    <script src="../assets/js/sidebar.js"></script>
+    <script src="../assets/js/edit-product.js"></script>
+    <!-- Script End -->
+</body>
+
+</html>

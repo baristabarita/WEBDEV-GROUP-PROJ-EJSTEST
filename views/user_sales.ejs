@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Plugin CSS -->
+    <link rel="stylesheet" href="assets/plugins/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/plugins/fontawesome-free-6.4.0-web/css/all.min.css">
+
+
+    <!-- Local CSS -->
+    <link rel="stylesheet" href="assets/css/sidebar-topbar.css">
+    <link rel="stylesheet" href="assets/css/dashboard.css">
+    <link rel="stylesheet" href="assets/css/sales.css">
+
+    <!-- Icon -->
+    <link rel="icon" href="images/icons/provlogo.png" type="image/x-icon">
+    <!-- Page Title -->
+    <title>Dashboard Page</title>
+</head>
+
+<body>
+    <div class="wrapper">
+
+
+        <!-- Sidebar Section Start -->
+        <nav id="sidebar">
+            <div class="sidebar-header">
+                <h3><img src="images/icons/provlogo.png" class="img-fluid" /><span>PROVENTORY</span></h3>
+            </div>
+            <ul class="list-unstyled component m-0">
+                <li class="">
+                    <a href="/user_dashboard" class="dashboard"><i class="fa-solid fa-gauge"></i>Dashboard </a>
+                </li>
+
+                <li class="">
+                    <a href="/users_profile" class=""><i class="fa-solid fa-user"></i>Profile </a>
+                </li>
+
+                <li class="dropdown">
+                    <a href="#homeSubmenu1" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        <i class="fa-solid fa-box-open"></i>Products
+                    </a>
+                    <ul class="collapse list-unstyled menu" id="homeSubmenu1">
+                        <li><a href="/user_manage_products"><i class="fa-solid fa-rectangle-history-circle-plus"></i>Manage Products</a></li>
+                    </ul>
+                </li>
+
+                <li class="active">
+                    <a href="/user_sales" class=""><i class="fa-solid fa-chart-line"></i>Sales </a>
+                </li>
+
+                <li class="">
+                    <a href="/user_recentlogs" class=""><i class="fa-solid fa-clock"></i>Recent Logs </a>
+                </li>
+
+                <li class="">
+                    <a href="/logout" class=""><i class="fa-solid fa-right-from-bracket"></i>Logout </a>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- Sidebar Section END -->
+
+
+        <!-- Page-content Start -->
+
+        <div id="content">
+
+            <!-- Top-Navbar Start -->
+            <div class="top-navbar">
+                <div class="xd-topbar">
+                    <div class="row">
+                        <div class="col-2 col-md-1 col-lg-1 order-2 order-md-1 align-self-center">
+                            <div class="xp-menubar">
+                                <i class="fa-solid fa-bars"></i>
+                            </div>
+                        </div>
+
+                        <!-- Search Bar Start -->
+                        <div class="col-md-5 col-lg-3 order-3 order-md-2">
+                            <div class="xp-searchbar">
+                                <form>
+                                    <div class="input-group">
+                                        <input type="search" class="form-control" placeholder="Search">
+                                        <div class="input-group-append">
+                                            <button class="btn" type="submit" id="button-addon2">Go
+                                            </button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                        <!-- Search Bar End -->
+
+                        <div class="col-10 col-md-6 col-lg-8 order-1 order-md-3">
+                            <div class="xp-profilebar text-right">
+                                <nav class="navbar p-1">
+                                    <ul class="nav navbar-nav flex-row ml-auto">
+                                        <li class="dropdown nav-item">
+                                            <a class="nav-link" href="#" data-toggle="dropdown">
+                                                <i class="fa-solid fa-bell fa-xl"></i>
+                                                <span class="notification">#</span>
+                                            </a>
+                                            <ul class="dropdown-menu">
+                                                <li><a href="#">You Have # New Messages</a></li>
+                                            </ul>
+                                        </li>
+
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="#">
+                                                <i class="fa-solid fa-envelope fa-xl"></i>
+                                            </a>
+                                        </li>
+
+                                        <li class="dropdown nav-item">
+                                            <a class="nav-link" href="#" data-toggle="dropdown">
+                                                <img id="dash-prof" src="images/icons/profile-dashboard.png" />
+                                                <span class="xp-user-live"></span>
+                                            </a>
+                                            <ul class="dropdown-menu small-menu">
+                                                <li><a href="./profile.html">
+                                                        <span class="material-icons">Profile</span>
+                                                    </a></li>
+                                                <li><a href="#">
+                                                        <span class="material-icons">Settings</span>
+                                                    </a></li>
+                                                <li><a href="./index.html">
+                                                        <span class="material-icons">logout</span>
+                                                    </a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+            <!-- Top-Navbar End -->
+
+
+            <!-- Main-Content START -->
+
+            <main class="main-content sales-wrap">
+                <div class="row justify-content-between">
+                    <h4>Sales</h4>
+                    <form action="" class="form-inline">
+                        <label for="choose-period">Choose Period: &nbsp;</label>
+                        <input type="date" class="form-control">
+                    </form>
+                </div>
+                <div class="status-section">
+                    
+                    <div class="sales">
+                        <div class="row sales-status">
+                            <div class="sales-stat day">
+                                <h3>
+                                    <i class="fa-solid fa-peso-sign"></i> 
+                                    <span id="day-income">1,305</span>
+                                </h3>
+                                <p>Today's income</p>
+                            </div>
+                            <div class="sales-stat week">
+                                <h3>
+                                    <i class="fa-solid fa-peso-sign"></i> 
+                                    <span id="week-income">12,005</span>
+                                </h3>
+                                <p>This Week's income</p>
+                            </div>
+                            <div class="sales-stat month">
+                                <h3>
+                                    <i class="fa-solid fa-peso-sign"></i> 
+                                    <span id="month-income">55,941</span>
+                                </h3>
+                                <p>This Months's income</p>
+                            </div>
+                            <div class="sales-stat year">
+                                <h3>
+                                    <i class="fa-solid fa-peso-sign"></i> 
+                                    <span id="year-income">675,941</span>
+                                </h3>
+                                <p>This Year's income</p>
+                            </div> 
+                        </div>
+                        <div>
+                            <!--<img class="sales-graph" src="../images/sample-graph.png" alt="">-->
+                            <canvas id="myChart"></canvas>
+                        </div> 
+                    </div>
+                    <div class="sales-info">
+                        <div class="top-selling sales">
+                            <div class="row justify-content-between align-content-center">
+                                <h6>Top Selling Products</h6>
+                                <div class="top-selling-menu">
+                                    <i class="fa-solid fa-ellipsis-vertical"></i>
+                                </div>
+                            </div>
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Rank</th>
+                                        <th>Name</th>
+                                        <th>Quantity</th>
+                                        <th>Price</th>
+                                        <th>Amount</th>
+                                        <th>Sold</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>Product Name</td>
+                                        <td>XXX</td>
+                                        <td>XXX</td>
+                                        <td>XXX</td>
+                                        <td>0 pcs</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td>Product Name</td>
+                                        <td>XXX</td>
+                                        <td>XXX</td>
+                                        <td>XXX</td>
+                                        <td>0 pcs</td>
+                                    </tr>
+                                    <tr>
+                                        <td>3</td>
+                                        <td>Product Name</td>
+                                        <td>XXX</td>
+                                        <td>XXX</td>
+                                        <td>XXX</td>
+                                        <td>0 pcs</td>
+                                    </tr>
+                                    <tr>
+                                        <td>4</td>
+                                        <td>Product Name</td>
+                                        <td>XXX</td>
+                                        <td>XXX</td>
+                                        <td>XXX</td>
+                                        <td>0 pcs</td>
+                                    </tr>
+                                    <tr>
+                                        <td>5</td>
+                                        <td>Product Name</td>
+                                        <td>XXX</td>
+                                        <td>XXX</td>
+                                        <td>XXX</td>
+                                        <td>0 pcs</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="sales-info-stats sales">
+                            <div class="row justify-content-center">
+                                <h6>Total Sales</h6>
+                                <div class="total-sales-menu">
+                                    <i class="fa-solid fa-ellipsis-vertical"></i>
+                                </div>
+                            </div>
+                            <div class="total-sales-style">
+                                <h3> 
+                                    <span id="total-sales">1,305,485
+                                    </span>
+                                </h3>
+                            </div>
+                            <p class="text-center">For the past month</p>
+                            <table>
+                                <tr>
+                                    <td>In Stock: </td>
+                                    <td>XXX</td>
+                                </tr>
+                                <tr>
+                                    <td>Stock Value: </td>
+                                    <td>XXX</td>
+                                </tr>
+                                <tr>
+                                    <td>Units Sold: </td>
+                                    <td>XXX</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </main>
+
+            <!-- Main-Content END -->
+
+
+
+
+            <!-- Footer-Section START -->
+
+            <footer class="footer">
+                <div class="container-fluid">
+                    <div class="footer-in">
+                        <p class="mb-0">&copy 2022 Proventory. All Rights Reserved.</p>
+                    </div>
+                </div>
+            </footer>
+
+            <!-- Footer-Section END -->
+
+        </div>
+        <!-- Page-Content END -->
+
+    </div>
+
+    </div>
+    <!-- Script Starts -->
+
+    <!-- Plugins -->
+    <script src="assets/plugins/jquery/jquery.js"></script>
+    <script src="assets/plugins/popper/popper.js"></script>
+    <script src="assets/plugins/chartjs/js/chart.js"></script>
+    <script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+
+    <!-- Own scripts -->
+    <script src="assets/js/sidebar.js"></script>
+    <script src="assets/js/sales_chart.js"></script>
+
+    <!-- Script End -->
+</body>
+
+</html>

@@ -1,0 +1,140 @@
+body {
+    overflow-x: hidden;
+    background: url(../../images/log-background2.png) no-repeat center center/cover;
+}
+
+.card0 {
+    backdrop-filter: blur(10px);
+    box-shadow: 0px 4px 8px 0px #000;
+    border: 1px solid transparent;
+    border-radius: 0px;
+    background-color: rgba(225,225,225,0.1);
+}
+
+.card2 {
+    margin: 40px 40px 0px 0px;
+}
+#logo-n-text{
+    margin-left: auto;
+    margin-right: auto;
+}
+.main-title {
+    font-size: 20px;
+    font-weight: 20;
+    text-align: center;
+    color: #fff;
+    
+}
+.logo {
+    width: 20%;
+    margin-left: 35px;
+}
+
+.log-image {
+    width:90%;
+}
+.log-img-icon{
+    width: 12%;
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+#log-title{
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+#log-button{
+    transition: .3s;
+    border: #2364AA solid 2px;
+    border-radius: 25px;
+    background-color: #fff;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1% 21% 1% 21%;
+    font-size: 30px;
+    color: #2364AA;
+    font-weight: bold;
+}
+#log-button:hover{
+    background-color: #2364AA;
+    color: #fff;
+}
+#acc-option{
+    border-radius: 25px;
+    background-color: #33658A;
+    color: white;
+}
+
+.text-sm {
+    font-size: 14px !important;
+}
+
+::placeholder {
+    color: #BDBDBD;
+    opacity: 1;
+    font-weight: 300
+}
+
+:-ms-input-placeholder {
+    color: #BDBDBD;
+    font-weight: 300
+}
+
+::-ms-input-placeholder {
+    color: #BDBDBD;
+    font-weight: 300
+}
+
+input, textarea {
+    padding: 10px 12px 10px 12px;
+    border: 1px solid lightgrey;
+    border-radius: 2px;
+    margin-bottom: 5px;
+    margin-top: 2px;
+    width: 100%;
+    box-sizing: border-box;
+    color: #2C3E50;
+    font-size: 14px;
+    letter-spacing: 1px;
+}
+
+input:focus, textarea:focus {
+    -moz-box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+    border: 1px solid #304FFE;
+    outline-width: 0;
+}
+
+button:focus {
+    -moz-box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+    outline-width: 0;
+}
+
+a {
+    color: inherit;
+    cursor: pointer;
+}
+
+
+@media screen and (max-width: 991px) {
+    .logo {
+        margin-left: 0px;
+    }
+
+    .log-image {
+        width: 90%;
+    }
+
+    .border-line {
+        border-right: none;
+    }
+    .card2 {
+        border-top: 1px solid #EEEEEE !important;
+        margin: 0px 15px;
+    }
+}

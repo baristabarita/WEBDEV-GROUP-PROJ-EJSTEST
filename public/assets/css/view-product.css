@@ -1,0 +1,23 @@
+hr{
+    color:black;
+    border-top: 2px solid rgba(0,0,0,.3);
+}
+
+/* Product Info CSS */
+#product-name{
+    color: #036D70;
+}
+
+/* Edit Product button CSS */
+#editProd-btn{
+    background-color: #007EA7;
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    font-weight: bold;
+    font-size: 20px;
+    border-radius: 12px;
+}
+#editProd-btn a{
+    color: #fff;
+}

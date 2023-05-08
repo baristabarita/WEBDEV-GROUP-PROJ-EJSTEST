@@ -1,0 +1,73 @@
+body{
+    background: url(../../images/log-background.png) no-repeat center center/cover;
+}
+
+.container{
+    position: relative;
+    min-height: 100vh;
+}
+.contact-us-container{
+    padding-bottom: 2.5rem; 
+}
+
+.card0 {
+    margin: 40px 40px 40px 40px;
+    box-shadow: 0px 4px 8px 0px #000;
+}
+
+.contact-us-icon{
+    width: 12%;
+    margin-left:auto;
+    margin-right: auto;
+}
+
+#contact-us-title{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.contact-mssg{
+    background-color: #dddddd;
+    color: #666666;
+    padding: 1em;
+    border: 2px solid transparent;
+    outline: none;
+    font-family: "Heebo", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.4;
+    width: 505px;
+    height: 100px;
+    transition: all 0.2s;
+  }
+
+#contactUs-btn{
+    transition: .3s;
+    margin-left: auto;
+    margin-right: auto;
+    font-weight: bold;
+    font-size: 20px;
+    background-color: #fff;
+    color: #F2BB05;
+    border: #F2BB05 solid 2px;
+    border-radius: 10px;
+}
+
+#contactUs-btn a{
+    transition: .3s;
+    color: #F2BB05;
+    text-decoration: none;
+}
+
+#contactUs-btn:hover{
+    background-color: #F2BB05;
+}
+#contactUs-btn:hover a {
+    color: #fff;
+}
+
+.footer-section{
+  position: absolute;
+  bottom: 1;
+  width: 100%;
+}

@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Plugin CSS -->
+    <link rel="stylesheet" href="assets/plugins/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/plugins/fontawesome-free-6.4.0-web/css/all.min.css">
+
+
+    <!-- Local CSS -->
+    <link rel="stylesheet" href="assets/css/manage-product-table.css">
+    <link rel="stylesheet" href="assets/css/add-edit-product.css">
+    <link rel="stylesheet" href="assets/css/modal.css">
+    <link rel="stylesheet" href="assets/css/sidebar-topbar.css">
+    <link rel="stylesheet" href="assets/css/dashboard.css">
+
+    <!-- Icon -->
+    <link rel="icon" href="images/icons/provlogo.png" type="image/x-icon">
+    <!-- Page Title -->
+    <title>Dashboard Page</title>
+</head>
+
+<body>
+    <div class="wrapper">
+
+
+        <!-- Sidebar Section Start -->
+        <nav id="sidebar">
+            <div class="sidebar-header">
+                <h3><img src="/images/icons/provlogo.png" class="img-fluid" /><span>PROVENTORY</span></h3>
+            </div>
+            <ul class="list-unstyled component m-0">
+                <li class="active">
+                    <a href="/user_dashboard" class="dashboard"><i class="fa-solid fa-gauge"></i>Dashboard </a>
+                </li>
+
+                <li class="">
+                    <a href="/users_profile" class=""><i class="fa-solid fa-user"></i>Profile </a>
+                </li>
+
+                <li class="dropdown">
+                    <a href="#homeSubmenu1" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        <i class="fa-solid fa-box-open"></i>Products
+                    </a>
+                    <ul class="collapse list-unstyled menu" id="homeSubmenu1">
+                        <li><a href="/user_manage_products"><i
+                                    class="fa-solid fa-rectangle-history-circle-plus"></i>Manage Products</a></li>
+                    </ul>
+                </li>
+
+                <li class="">
+                    <a href="/user_sales" class=""><i class="fa-solid fa-chart-line"></i>Sales </a>
+                </li>
+
+                <li class="">
+                    <a href="/user_recentlogs" class=""><i class="fa-solid fa-clock"></i>Recent Logs </a>
+                </li>
+
+                <li class="">
+                    <a href="/logout" class=""><i class="fa-solid fa-right-from-bracket"></i>Logout </a>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- Sidebar Section END -->
+
+
+        <!-- Page-content Start -->
+
+        <div id="content">
+
+            <!-- Top-Navbar Start -->
+            <div class="top-navbar">
+                <div class="xd-topbar">
+                    <div class="row">
+                        <div class="col-2 col-md-1 col-lg-1 order-2 order-md-1 align-self-center">
+                            <div class="xp-menubar">
+                                <i class="fa-solid fa-bars"></i>
+                            </div>
+                        </div>
+
+                        <!-- Search Bar Start -->
+                        <div class="col-md-5 col-lg-3 order-3 order-md-2">
+                            <div class="xp-searchbar">
+                                <form>
+                                    <div class="input-group">
+                                        <input type="search" class="form-control" placeholder="Search">
+                                        <div class="input-group-append">
+                                            <button class="btn" type="submit" id="button-addon2">Go
+                                            </button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                        <!-- Search Bar End -->
+
+                        <div class="col-10 col-md-6 col-lg-8 order-1 order-md-3">
+                            <div class="xp-profilebar text-right">
+                                <nav class="navbar p-1">
+                                    <ul class="nav navbar-nav flex-row ml-auto">
+                                        <li class="dropdown nav-item">
+                                            <a class="nav-link" href="#" data-toggle="dropdown">
+                                                <i class="fa-solid fa-bell fa-xl"></i>
+                                                <span class="notification">#</span>
+                                            </a>
+                                            <ul class="dropdown-menu">
+                                                <li><a href="#">You Have # New Messages</a></li>
+                                            </ul>
+                                        </li>
+
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="#">
+                                                <i class="fa-solid fa-envelope fa-xl"></i>
+                                            </a>
+                                        </li>
+
+                                        <li class="dropdown nav-item">
+                                            <a class="nav-link" href="#" data-toggle="dropdown">
+                                                <img id="dash-prof" src="../images/icons/profile-dashboard.png" />
+                                                <span class="xp-user-live"></span>
+                                            </a>
+                                            <ul class="dropdown-menu small-menu">
+                                                <li><a href="./profile.html">
+                                                        <span class="material-icons">Profile</span>
+                                                    </a></li>
+                                                <li><a href="#">
+                                                        <span class="material-icons">Settings</span>
+                                                    </a></li>
+                                                <li><a href="./index.html">
+                                                        <span class="material-icons">logout</span>
+                                                    </a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+            <!-- Top-Navbar End -->
+
+
+            <!-- Main-Content START -->
+
+            <div class="main-content">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h4>Dashboard</h4>
+                        <p>Welcome <%=data[0].username%> !
+                        </p>
+                        <hr>
+                    </div>
+                    
+                </div>
+                
+                <!-- Status Section - START -->
+
+                <section class="status-section">
+                    <div class="inventory-stats">
+                        <div class="stat bg-secondary">
+                            <h1>
+                                <i class="fa-solid fa-boxes-stacked"></i>
+                                <span id="total-products">480</span>
+                            </h1>
+                            <p>Total Stocks</p>
+                        </div>
+                        <div class="stat bg-success">
+                            <h1>
+                                <i class="fa-solid fa-peso-sign"></i>
+                                <span id="store-value">55,941</span>
+                            </h1>
+                            <p>Total Stock Value</p>
+                        </div>
+                        <div class="stat bg-danger ">
+                            <h1>
+                                <i class="fa-solid fa-box-open"></i>
+                                <span id="out-of-stock">5</span>
+                            </h1>
+                            <p>Out of Stock</p>
+                        </div>
+                        <div class="stat bg-info">
+                            <h1>
+                                <i class="fa-solid fa-table-list"></i>
+                                <span id="total-categories">23</span>
+                            </h1>
+                            <p>Total Categories</p>
+                        </div>
+                    </div>
+
+                    <div class="sales">
+                        <h5>Sales</h5>
+                        <div class="row sales-status">
+                            <div class="sales-stat day">
+                                <h3>
+                                    <i class="fa-solid fa-peso-sign"></i>
+                                    <span id="day-income">1,305</span>
+                                </h3>
+                                <p>Today's income</p>
+                            </div>
+                            <div class="sales-stat week">
+                                <h3>
+                                    <i class="fa-solid fa-peso-sign"></i>
+                                    <span id="week-income">12,005</span>
+                                </h3>
+                                <p>This Week's income</p>
+                            </div>
+                            <div class="sales-stat month">
+                                <h3>
+                                    <i class="fa-solid fa-peso-sign"></i>
+                                    <span id="month-income">55,941</span>
+                                </h3>
+                                <p>This Months's income</p>
+                            </div>
+                            <div class="sales-stat year">
+                                <h3>
+                                    <i class="fa-solid fa-peso-sign"></i>
+                                    <span id="year-income">675,941</span>
+                                </h3>
+                                <p>This Year's income</p>
+                            </div>
+                        </div>
+                        <div>
+                            <!--<img class="sales-graph" src="../images/sample-graph.png" alt="">-->
+                            <canvas id="myChart"></canvas>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Status Section - END -->
+
+                <!-- Table start -->
+                <br>
+                <span id="message"></span>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="table-wrapper">
+                            <!-- Top Part of table -->
+                            <div class="table-title">
+                                <div class="row">
+                                    <div class="col-sm-6 p-0 flex justify-content-lg-start justify-content-center">
+                                        <h2 class="ml-lg-2">Manage Products</h2>
+                                    </div>
+                                    <div class="col-sm-6 p-0 flex justify-content-lg-end justify-content-center">
+                                        <button type="button" class="btn btn-success" id="add_product">
+                                            <i class="fa-solid fa-square-plus"></i>
+                                            <span>Add New Product</span>
+                                        </button>
+                                        <a href="#" class="btn btn-danger">
+                                            <i class="fa-solid fa-square-minus"></i>
+                                            <span>Delete</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <table class="table table-striped table-hover" id="products_table">
+                                <!-- Table Names -->
+                                <thead>
+                                    <tr>
+                                        <th>Select</th>
+                                        <th>Item #</th>
+                                        <th>Product Name</th>
+                                        <th>Category</th>
+                                        <th>Quantity</th>
+                                        <th>Price</th>
+                                        <th>Status</th>
+                                        <th>Actions</th>
+                                    </tr>
+                                </thead>
+                                <!-- Table Names -->
+
+                                <tbody class="product-list"></tbody>
+
+
+                            </table>
+
+                            <div class="clearfix">
+                                <div class="hint-text">Showing <b>5</b> out of <b>25</b></div>
+                                <ul class="pagination">
+                                    <li class="page-item disabled"><a href="#">Previous</a></li>
+                                    <li class="page-item active"><a href="#" class="page-link">1</a></li>
+                                    <li class="page-item "><a href="#" class="page-link">2</a></li>
+                                    <li class="page-item "><a href="#" class="page-link">3</a></li>
+                                    <li class="page-item "><a href="#" class="page-link">4</a></li>
+                                    <li class="page-item "><a href="#" class="page-link">5</a></li>
+                                    <li class="page-item "><a href="#" class="page-link">Next</a></li>
+                                </ul>
+                            </div>
+
+                            <div>
+                                <button href="#placeOrderModal" class="place-order-btn btn btn-success" data-toggle="modal">Place Order</button>
+                            </div>
+
+                            <!-- New Delete Modal - Statrt -->
+                            
+                            <div class="modal fade" tabindex="-1" id="confirm_delete_modal">
+                                <div class="modal-dialog text-center">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title">Delete Product</h5>
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                            </button>
+                                        </div>
+                                        <div class="modal-body">
+                                                <i class="fa-solid fa-triangle-exclamation text-danger"></i>
+                                                WARNING
+                                                <i class="fa-solid fa-triangle-exclamation text-danger"></i>
+                                           
+                                            <p>Are you sure you want to delete?</p>
+                                            <p class="text-warning"><small>This product will be deleted permanently in the inventory and will never be
+                                                recovered.</small></p>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary"
+                                                data-dismiss="modal">Cancel</button>
+                                            <button type="button" class="btn btn-danger" id="delete_product">Delete</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- New Delete Modal - End -->
+
+                            <!-- Add/Edit Product Modal - Start -->
+                            <div class="modal fade" tabindex="-1" id="prodmng_modal">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <form method="post" id="add_product_form">
+                                            <div class="modal-header" id="dynamic_modal_title">
+                                                <h5 class="modal-title"></h5>
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <div class="mb-3">
+                                                    <label class="form-label">Select Product Image</label>
+                                                    <input type="file" accept="image/png, image/gif, image/jpeg" name="product_img" id="product_img">
+                                                </div>
+                                                <div class="mb-3">
+                                                    <label class="form-label">Product Name:</label>
+                                                    <input type="text" class="form-control" name="product_name" id="product_name"  required>
+                                                </div>
+                                                <div class="mb-3">
+                                                    <label class="form-label">Product Category:</label>
+                                                    <select  name="product_category" id="product_category"class="form-control" required>
+                                                        <option value="" disabled selected>Choose a category</option>
+                                                        <option>Clothes</option>
+                                                        <option>Gadget</option>
+                                                        <option>Accessories</option>
+                                                        <option value="addOption">Add another category</option>
+                                                    </select>
+                                                    <div id="addOptionDiv" style="display: none;">
+                                                        <label for="newOption">Enter new category:</label>
+                                                        <input type="text" id="newOption" name="newOption" class="form-control">
+                                                        <button type="button" id="addOptionButton" class="btn-secondary float-right">Add Category</button>
+                                                    </div>
+                                                </div>
+                                                <div class="mb-3">
+                                                    <label class="form-label">Product Price:</label>
+                                                    <input type="number" min="1" step="any" class="form-control" name="product_price" id="product_price" required>
+                                                </div>
+                                                <div class="mb-3">
+                                                    <label class="form-label">Quantity in Stock:</label>
+                                                    <input type="number" min="1" class="form-control" name="product_quantity" id="product_quantity" required>
+                                                </div>
+                                                <div class="mb-3">
+                                                    <label class="form-label">Product Description:</label>
+                                                    <textarea class="form-control" name="product_description" id="product_description"  required></textarea>
+                                                </div>
+                                            </div>
+                                            <div class="modal-footer">
+                                                <input type="hidden" name="id" id="id" >
+                                                <input type="hidden" name="prodmng" id="prodmng" value="Add">
+                                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                                                <button type="submit" class="btn btn-success" id="prodmng_btn" ></button>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Add/Edit Product Modal - END -->
+
+                            <!-- New Transaction Modal - START -->
+                            <div class="modal fade" tabindex="-1" id="placeOrderModal" role="dialog">
+                                <div class="modal-dialog" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title">Place New Order</h5>
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                            </button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <div>
+                                                <div>
+                                                    <input type="text" name="search-product" id="search-product" class="form-control">
+                                                    <button class="btn btn-info" id="order-product">Add product</button>
+                                                </div>
+                                                <table class="order-table">
+                                                    <thead>
+                                                        <tr>
+                                                            <th>Item Name</th>
+                                                            <th>Quantity</th>
+                                                            <th class="text-center">In Stock</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody class="orders">
+                                                        <tr>
+                                                            <td class="order-item-name">Item name here</td>
+                                                            <td>
+                                                                <input type="number" name="order-quantity" id="order-quantity" min="1" class="form-control">
+                                                            </td>
+                                                            <td class="order-stock">20</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="order-item-name">Item name here</td>
+                                                            <td>
+                                                                <input type="number" name="order-quantity" id="order-quantity" min="1" class="form-control">
+                                                            </td>
+                                                            <td class="order-stock">20</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="order-item-name">Item name here</td>
+                                                            <td>
+                                                                <input type="number" name="order-quantity" id="order-quantity" min="1" class="form-control">
+                                                            </td>
+                                                            <td class="order-stock">20</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-secondary"
+                                                    data-dismiss="modal">Cancel</button>
+                                                <button type="button" class="btn btn-success" id="save-changes-btn" data-dismiss="modal">Save Order</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            <!-- New Transaction Modal - END -->
+
+                        </div>
+                    </div>
+                </div>
+                <!-- Table end-->
+            </div>
+            <!-- Main-Content END -->
+
+        </div>
+        <!-- Page-Content END -->
+
+        <!-- Footer-Section START -->
+
+        <footer class="footer">
+            <div class="container-fluid">
+                <div class="footer-in">
+                    <p class="mb-0">&copy 2022 Proventory. All Rights Reserved.</p>
+                </div>
+            </div>
+        </footer>
+
+        <!-- Footer-Section END -->
+    </div>
+
+    </div>
+
+    </div>
+    <!-- Script Starts -->
+
+    <!-- Plugins -->
+    <!--<script src="assets/plugins/jquery/jquery.js"></script>-->
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script src="assets/plugins/popper/popper.js"></script>
+    <script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/plugins/chartjs/js/chart.js"></script>
+
+    <!--<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    -->
+    <!-- Own scripts -->
+    <!--<script src="../../assets/js/supad_acc_crud.js"></script>-->
+    <script src="assets/js/render_products.js"></script>
+    <script src="assets/js/su_user_log_chart.js"></script>
+    <script src="assets/js/sidebar.js"></script>
+
+
+    <!-- Script End -->
+</body>
+
+</html>
