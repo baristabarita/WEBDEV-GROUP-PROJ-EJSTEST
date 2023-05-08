@@ -1,0 +1,6 @@
+Step 1: Activate XAMPP and initialize Apache and MySQL
+Step 2: Open CMD in this folder
+Step 3: type node app.js
+Step 4: After successful connection, open a browser
+        and type localhost:3000
+Step 5: Finished
