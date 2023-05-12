@@ -26,8 +26,8 @@ $(document).ready(() => {
                             <th class="price">`+Number(data.data[i].price).toFixed(2)+`</th>
                             <th class="status">`+data.data[i].status+`</th>
                             <th>
-                                <button type="button" class="act-btn btn btn-outline-secondary view">
-                                    <i class="fa-solid fa-eye"></i>
+                                <button class="act-btn btn btn-outline-secondary view_product">
+                                <a href = "/user_view_products"><i class="fa-solid fa-eye"></i></a>
                                 </button>
                                 <button type="button" class="act-btn btn btn-outline-warning edit_product" data-id="`+data.data[i].id+`">
                                     <i class="fa-solid fa-pen"></i>
