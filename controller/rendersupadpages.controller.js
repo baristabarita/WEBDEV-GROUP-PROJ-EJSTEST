@@ -1,12 +1,6 @@
 const connection = require('../database/connection');
 
 
-const renderAddAccPage = (req, res)=>{
-    res.render('add_user', {
-        title: 'Add User Account'
-    });
-}
-
 const renderMngAccsMainPage = (req,res)=>{
     let sql = "SELECT * from accounts"
     let query = connection.query(sql, (err,rows)=>{
@@ -39,13 +33,6 @@ const renderMngEmpAccsPage = (req,res)=>{
         });
     });
 }
-/*
-const renderSupAdProfPage = (req, res)=>{
-    res.render('supad_profile', {
-        title: 'Super Admin Profile Page'
-    });
-}*/
-
 
 const renderSupAdRecLogsPage = (req, res)=>{
     res.render('supad_reclogs', {

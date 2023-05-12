@@ -51,7 +51,6 @@ router.post('/accmng', (req, res, next) => {
 
   if (accmng == 'Edit') {
     const id = req.body.id
-    //const image = req.body.product_img
     const category = req.body.account_category
     const fname = req.body.fname
     const lname = req.body.lname
