@@ -40,8 +40,7 @@ const renderSupAdRecLogsPage = (req, res)=>{
     });
 }
 
-module.exports = { renderAddAccPage, 
-                   renderMngAccsMainPage, 
+module.exports = { renderMngAccsMainPage, 
                    renderMngAdminAccsPage, 
                    renderMngEmpAccsPage,
                    renderSupAdRecLogsPage
