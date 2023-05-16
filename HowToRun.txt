@@ -5,3 +5,13 @@ Step 3: type node app.js
 Step 4: After successful connection, open a browser
         and type localhost:3000
 Step 5: Finished
+
+>>Emails and Passwords for Testing Login and Logouts:
+  /* User Email and Password */
+  Email: markfishback@gmail.com
+  Password: mfishback123
+
+  /* Super Admin Email and Password */
+  Email: admin1@gmail.com
+  Password: admin1
+  

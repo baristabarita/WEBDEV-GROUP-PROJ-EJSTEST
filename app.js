@@ -19,7 +19,6 @@ const renderSupAdPages = require('./routes/rendersupadpages');
 const userRouter = require('./routes/userlogreg');
 const renderUserPages = require('./routes/renderuserpages');
 
-const userAccMng = require('./routes/accmng');
 
 const accountManaging = require('./routes/superadminaccmng');
 const productManaging = require('./routes/userprodmng');
@@ -44,8 +43,7 @@ app.use(session({
         cookie: {maxAge: 60000}
         }));
 
-//routes
-//app.use(userAccMng);
+//routesp
 app.use(renderSupAdPages);
 app.use(superAdRouter);
 

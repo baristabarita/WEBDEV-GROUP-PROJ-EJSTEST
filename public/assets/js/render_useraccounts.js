@@ -106,7 +106,7 @@ $(document).ready(() => {
 
     $(document).on('click', '.delete_account', e => {
         const id = e.target.dataset.id
-        const message = "Are you sure you want to delete this product?"
+        const message = "Are you sure you want to delete this Account?"
 
         if (confirm(message)) {
             $.ajax({
