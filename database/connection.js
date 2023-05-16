@@ -5,7 +5,7 @@ const connection = mysql.createConnection({
     user: 'root',
     port: null,
     password: '',
-    database: 'proventory'
+    database: 'proventory_app'
 });
 
 connection.connect(function(error){

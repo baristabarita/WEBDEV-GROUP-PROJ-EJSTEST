@@ -22,3 +22,34 @@ const ctx = document.getElementById('myChart').getContext('2d');
       responsive: true,
     }
   });
+
+// Dummy percent value
+const percentValue = 75;
+
+// Create the doughnut chart
+const chart = new Chart(document.getElementById("total-sales-graph").getContext('2d'), {
+  type: 'doughnut',
+  data: {
+    labels: ['Sold', 'Remaining'],
+    datasets: [{
+      label: 'Sales',
+      backgroundColor: ['#28a745', '#dc3545'],
+      data: [percentValue, 100 - percentValue]
+    }]
+  },
+  options: {
+    responsive: true,
+    maintainAspectRatio: false,
+    cutoutPercentage: 80,
+    legend: {
+      display: false
+    },
+    tooltips: {
+      callbacks: {
+        label: function(tooltipItem, data) {
+          return data.labels[tooltipItem.index] + ': ' + data.datasets[tooltipItem.datasetIndex].data[tooltipItem.index] + '%';
+        }
+      }
+    }
+  }
+});
