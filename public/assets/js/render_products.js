@@ -32,9 +32,11 @@ $(document).ready(() => {
                                 <button type="button" class="act-btn btn btn-outline-warning edit_product" data-id="`+data.data[i].id+`">
                                     <i class="fa-solid fa-pen"></i>
                                 </button>
+                                
                                 <button type="button" class="act-btn btn btn-outline-danger delete_product" data-id="`+data.data[i].id+`">
                                     <i class="fa-solid fa-trash"></i>
                                 </button>
+                                
                             </th>
                         </tr>
                         `

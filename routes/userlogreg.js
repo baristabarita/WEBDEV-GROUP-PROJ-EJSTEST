@@ -11,5 +11,8 @@ router.post('/login', user.login);
 router.get('/user_dashboard', user.dashboard);
 router.get('/logout', user.logout);
 router.get('/users_profile',user.profile);
+router.get('/user_manage_products', user.mngprods);
+router.get('/user_recentlogs', user.recentLogs);
+router.get('/user_sales', user.sales);
 
 module.exports = router;
