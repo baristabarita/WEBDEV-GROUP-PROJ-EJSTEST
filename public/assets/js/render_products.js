@@ -79,7 +79,12 @@ $(document).ready(() => {
 
     $(document).on('click', '.edit_product', (e) => {
 
-        const id = e.target.dataset.id
+        let id = e.target.dataset.id;
+
+        // If icon was clicked
+        if (id == undefined) {
+            id = e.target.parentElement.dataset.id
+        } 
 
         $('#dynamic_modal_title').text('Edit Product')
         $('#prodmng').val('Edit')
@@ -104,8 +109,16 @@ $(document).ready(() => {
     })
 
     $(document).on('click', '.delete_product', e => {
-        const id = e.target.dataset.id
+
+        let id = e.target.dataset.id;
+
+        // If icon was clicked
+        if (id == undefined) {
+            id = e.target.parentElement.dataset.id
+        } 
+
         const message = "Are you sure you want to delete this product?"
+
 
         if (confirm(message)) {
             $.ajax({
