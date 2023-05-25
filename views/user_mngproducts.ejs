@@ -54,11 +54,11 @@
                 <li class="">
                     <a href="/user_sales" class=""><i class="fa-solid fa-chart-line"></i>Sales </a>
                 </li>
-
+                <% if(data[0].category === 'Admin'){%>
                 <li class="">
                     <a href="/user_recentlogs" class=""><i class="fa-solid fa-clock"></i>Recent Logs </a>
                 </li>
-
+                <%}%>
                 <li class="">
                     <a href="/logout" class=""><i class="fa-solid fa-right-from-bracket"></i>Logout </a>
                 </li>
@@ -178,6 +178,7 @@
                                     <div class="col-sm-6 p-0 flex justify-content-lg-start justify-content-center">
                                         <h2 class="ml-lg-2">Manage Products</h2>
                                     </div>
+                                    <% if(data[0].category === 'Admin'){%>
                                     <div class="col-sm-6 p-0 flex justify-content-lg-end justify-content-center">
                                         <button type="button" class="btn btn-success" id="add_product">
                                             <i class="fa-solid fa-square-plus"></i>
@@ -188,6 +189,7 @@
                                             <span>Delete</span>
                                         </a>
                                     </div>
+                                    <%}%>
                                 </div>
                             </div>
 

@@ -52,11 +52,11 @@
                 <li class="active">
                     <a href="/user_sales" class=""><i class="fa-solid fa-chart-line"></i>Sales </a>
                 </li>
-
+                <% if(data[0].category === 'Admin'){%>
                 <li class="">
                     <a href="/user_recentlogs" class=""><i class="fa-solid fa-clock"></i>Recent Logs </a>
                 </li>
-
+                <%}%>
                 <li class="">
                     <a href="/logout" class=""><i class="fa-solid fa-right-from-bracket"></i>Logout </a>
                 </li>

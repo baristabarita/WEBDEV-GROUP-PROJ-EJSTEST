@@ -77,6 +77,48 @@ exports.dashboard = function(req, res, next){
         res.render('user_dashboard.ejs', {data:results});
     });
 };
+exports.mngprods = function(req, res, next){
+    var user = req.session.user;
+    var userId = req.session.userId;
+    console.log('Visited Manage Products Page: UserID #'+userId);
+    if(userId == null){
+        res.redirect("/login");
+        return;
+    }
+
+    var sql = "SELECT * FROM `accounts` WHERE `id` = '"+userId+"'";
+    db.query(sql, function(err, results){
+        res.render('user_mngproducts.ejs', {data:results});
+    });
+};
+
+exports.recentLogs = function(req,res){
+    var userId = req.session.userId;
+    console.log('At Recent Logs Page: UserID #'+userId);
+    if(userId == null){
+        res.redirect("/login");
+        return;
+    }
+
+    var sql = "SELECT * FROM `accounts` WHERE `id` = '"+userId+"'";
+    db.query(sql, function(err, result){
+        res.render('user_recentlogs.ejs', {data:result});
+    });
+};
+
+exports.sales = function(req,res){
+    var userId = req.session.userId;
+    console.log('At Sales Page: UserID #'+userId);
+    if(userId == null){
+        res.redirect("/login");
+        return;
+    }
+
+    var sql = "SELECT * FROM `accounts` WHERE `id` = '"+userId+"'";
+    db.query(sql, function(err, result){
+        res.render('user_sales.ejs', {data:result});
+    });
+};
 
 exports.profile = function(req,res){
     var userId = req.session.userId;
